@@ -5,9 +5,8 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
 
-public interface Commentrepository extends MongoRepository<CommentsModel,String> {
-    List<CommentsModel> getAll();
-    CommentsModel addNewComment(CommentsModel commentsModel);
+public interface CommentRepository extends MongoRepository<CommentsModel,String> {
+
 
 
 }

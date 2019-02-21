@@ -11,9 +11,19 @@ public class NewsModel {
    private String author;
    private String[] images;
    private Date publish;
+   private int numberOfComments;
+
+    public int getNumberOfComments() {
+        return numberOfComments;
+    }
+
+    public void setNumberOfComments(int numberOfComments) {
+        this.numberOfComments = numberOfComments;
+    }
 
     public String getTitle() {
         return title;
+
     }
 
     public void setTitle(String title) {
