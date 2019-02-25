@@ -47,6 +47,7 @@ public class UserController {
         if(userService.findOne(data.getEmail())!=null) {
             if (userService.findOne(data.getEmail()).getRole().equals("admin"))
             {
+                System.out.println(userService.findOne(data.getEmail()).getRole());
                 String UserToken=Jwts.builder().setSubject(data.getEmail()).setIssuedAt(new Date())
                         .signWith(SignatureAlgorithm.HS256, "secretkey").compact();
                 return ResponseEntity.status(201).header("Content-Type", "application/json; charset=UTF-8")

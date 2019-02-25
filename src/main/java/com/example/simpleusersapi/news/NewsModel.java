@@ -1,17 +1,49 @@
 package com.example.simpleusersapi.news;
 
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import antlr.collections.List;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
 import java.util.Date;
+
 
 @Document(collection="news")
 public class NewsModel {
    private String title;
    private String category;
    private String author;
-   private String[] images;
-   private Date publish;
+   private ImagesModel images;
+
+    public ImagesModel getImages() {
+        return images;
+    }
+
+    public void setImages(ImagesModel images) {
+        this.images = images;
+    }
+
+    private Date publish;
    private int numberOfComments;
+   private String subtitle;
+   private String textContent;
+
+    public String getTextContent() {
+        return textContent;
+    }
+
+    public void setTextContent(String textContent) {
+        this.textContent = textContent;
+    }
+
+    public String getSubtitle() {
+        return subtitle;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
+    }
 
     public int getNumberOfComments() {
         return numberOfComments;
@@ -46,13 +78,7 @@ public class NewsModel {
         this.author = author;
     }
 
-    public String[] getImages() {
-        return images;
-    }
 
-    public void setImages(String[] images) {
-        this.images = images;
-    }
 
     public Date getPublish() {
         return publish;
