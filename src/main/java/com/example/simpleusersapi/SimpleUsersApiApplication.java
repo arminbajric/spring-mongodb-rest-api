@@ -17,6 +17,7 @@ public class SimpleUsersApiApplication {
         registrationBean.setFilter(new JwtFilter());
         registrationBean.addUrlPatterns("/portal/*");
 
+
         return registrationBean;
     }
     @Bean

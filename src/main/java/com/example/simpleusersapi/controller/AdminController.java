@@ -24,7 +24,7 @@ public class AdminController {
     @RequestMapping(value = "/cpanel",method = RequestMethod.POST)
     public ResponseEntity doActions(@RequestParam("action") String action,@RequestBody NewsModel model)
     {
-        System.out.println(model);
+
 
       if(action.equals("addnews"))
       {
